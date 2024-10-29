@@ -1,0 +1,50 @@
+﻿<!-- Save this as layout.html in your MVC project's Views/Shared directory -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Dashboard Layout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="~/Content/style.css" /> <!-- Replace with your CSS file path -->
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="navbar">
+        <div class="title">Dashboard</div>
+        <div class="toggle-btn" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="user-info">
+            <span>Welcome, User!</span>
+        </div>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#"><i class="fas fa-home"></i> <span class="link-text">Dashboard</span></a></li>
+            <li><a href="">Create Batch</a></li>
+            <li><a href="#">Register Candidate</a></li>
+            <li><a href="#">View Candidate</a></li>
+            <li><a href="#">View Candidate Dark Mode</a></li>
+            <li><a href="#">Download Client Service</a></li>
+        </ul>
+    </div>
+
+   
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const content = document.getElementById('content');
+            sidebar.classList.toggle('collapsed');
+        }
+    </script>
+
+
+
+    <section class="dashboard-cards">
+        @RenderBody()
+    </section>
+</body>
+</html>

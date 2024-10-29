@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Batch</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        .navbar {
+            height: 50px;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            border-bottom: 1px solid #ddd;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+            .navbar .title {
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: #5D3FD3;
+            }
+
+            .navbar .user-info {
+                display: flex;
+                align-items: center;
+            }
+
+                .navbar .user-info img {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                }
+
+                .navbar .user-info span {
+                    font-size: 1rem;
+                    color: #555;
+                }
+
+        .container {
+            max-width: 1200px;
+            margin: 80px auto 0 auto;
+            padding: 20px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: #5D3FD3;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .create-batch {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+            .create-batch input[type="text"] {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                font-size: 1rem;
+            }
+
+            .create-batch button {
+                padding: 10px 20px;
+                background-color: #A168F5;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                font-size: 1rem;
+                cursor: pointer;
+            }
+
+                .create-batch button:hover {
+                    background-color: #8e56d8;
+                }
+
+        .batch-list {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+            .batch-list table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+
+            .batch-list th, .batch-list td {
+                padding: 12px;
+                border: 1px solid #ddd;
+                text-align: center;
+                font-size: 1rem;
+            }
+
+            .batch-list th {
+                background-color: #f3f3f3;
+                font-weight: bold;
+            }
+
+            .batch-list .delete-btn {
+                padding: 8px 16px;
+                background-color: #ff6b6b;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+                .batch-list .delete-btn:hover {
+                    background-color: #e55656;
+                }
+
+        .search-container {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+            .search-container input[type="text"] {
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                font-size: 1rem;
+                width: 300px;
+            }
+    </style>
+</head>
+<body>
+   
+
+    <div class="container">
+        <div class="section-title">Create/View Batches</div>
+
+        <div class="create-batch">
+            <h3>Create Batch</h3>
+            <input type="text" placeholder="Enter batch name">
+            <button>Create Batch</button>
+        </div>
+
+        <div class="batch-list">
+            <div class="search-container">
+                <label for="search">Search:</label>
+                <input type="text" id="search" placeholder="Search...">
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Batch Name</th>
+                        <th>USER</th>
+                        <th>Date of Batch Creation</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>SET 2nd Batch</td>
+                        <td>104</td>
+                        <td>2024-09-20 10:19:35</td>
+                        <td><button class="delete-btn">DELETE</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>8:30 to 12:30 Morning Batch</td>
+                        <td>104</td>
+                        <td>2024-09-21 10:16:38</td>
+                        <td><button class="delete-btn">DELETE</button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>8:30 to 12:30 Morning Batch Computer Batch</td>
+                        <td>104</td>
+                        <td>2024-09-25 09:37:14</td>
+                        <td><button class="delete-btn">DELETE</button></td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
